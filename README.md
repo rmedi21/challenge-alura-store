@@ -1,8 +1,8 @@
 ### RESUMEN
-#### OBJETIVO:
+#### OBJETIVO
 Elegir que tienda vender para invertir en un nuevo negocio.
-
-#### ESTRUCTURA DEL PROYECTO:
+<br/><br/>
+#### ESTRUCTURA DEL PROYECTO
 1. Importación y limpieza de datos
 2. Análisis
     * Analisis de facturacion
@@ -12,14 +12,12 @@ Elegir que tienda vender para invertir en un nuevo negocio.
     * Envío promedio por tienda
 4. Gráficos
 3. Conclusiones
-
+<br/><br/>
 #### EJEMPLOS DE INSIGHTS
-Evolucion de ticket promedio:
+Evolucion de ticket promedio en los ultimos 24 meses: se puede observar que la tienda 4 es la que tiene menor ticket promedio.
 
-Código:
+*Código:*
 ```python
-# Grafico 4: Ticket promedio
-# Las tienda 4 tienen el menor ticket promedio
 df_tiendas_periodo = df_tiendas.groupby(['tienda', df_tiendas['fecha'].dt.strftime('%Y%m')]) \
                                .agg(ticket_prom=('precio', 'mean')) \
                                .reset_index(drop=False)
@@ -44,16 +42,19 @@ for i, ax in enumerate(axs.flat):
   ax.set_title(label=tienda.capitalize(), fontsize=12)
 
 for ax in axs.ravel():
-    ax.set_ylim(ymin, ymax)
-    ax.xaxis.set_major_locator(plt.MultipleLocator(4))
-    ax.tick_params(labelsize=9)
-    ax.tick_params('x', labelrotation=45)
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.legend(loc='best', frameon=False, fontsize=7)
+  ax.set_ylim(ymin, ymax)
+  ax.xaxis.set_major_locator(plt.MultipleLocator(4))
+  ax.tick_params(labelsize=9)
+  ax.tick_params('x', labelrotation=45)
+  ax.spines['top'].set_visible(False)
+  ax.spines['right'].set_visible(False)
+  ax.legend(loc='best', frameon=False, fontsize=7)
+
+plt.plot()
 ```
 
-Gráfico:
-
+*Gráfico:*
+![Ticket promedio por tienda en los ultimos 24 meses](img/ticket_promedio_24m.png)
+<br/><br/>
 #### INSTRUCCIONES DE EJECUCIÓN
-El proyecto fue desarrollado en *Python* para ejecutarse en un entorno de *Google Colab*. El código está dividido en secciones que a su vez se dividen en bloques, que siguen un orden secuencial de ejecución.
+El proyecto fue desarrollado en *Python* para ejecutarse en un entorno de *Google Colab*. El código está dividido en secciones que a su vez se dividen en bloques que siguen un orden secuencial de ejecución.
