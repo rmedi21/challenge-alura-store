@@ -11,13 +11,13 @@ Elegir que tienda vender para invertir en un nuevo negocio.
     * Productos más y menos vendidos
     * Envío promedio por tienda
 3. Gráficos
-4. Conclusiones
+4. Informe y conclusiones
 <br/><br/>
 #### INSTRUCCIONES DE EJECUCIÓN
 El proyecto fue desarrollado en *Python* para ejecutarse en un entorno de *Google Colab*. El código está dividido en secciones que a su vez se dividen en bloques que siguen un orden secuencial de ejecución.
 <br/><br/>
 #### EJEMPLO DE INSIGHT
-Evolucion de ticket promedio en los ultimos 24 meses: se puede observar que la tienda 4 es la que tiene menor ticket promedio.
+Evolucion de ticket promedio en los ultimos 12 meses: se puede observar que la tienda 4 es la que tiene menor ticket promedio.
 <br/><br/>
 *Código:*
 ```python
@@ -57,7 +57,7 @@ plt.plot()
 ```
 *Gráfico:*
 <br/>
-![Ticket promedio por tienda en los ultimos 24 meses](img/ticket_promedio_24m.png)
+![Ticket promedio por tienda en los ultimos 24 meses](img/ticket_promedio_12m.png)
 <br/><br/>
 > [!NOTE]
 > El informe final se encuentra dentro del archivo *ipynb*.
